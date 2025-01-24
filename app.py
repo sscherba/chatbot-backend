@@ -4,7 +4,8 @@ import openai
 import os
 
 app = Flask(__name__)
-CORS(app)
+
+CORS(app, resources={r"/chat": {"origins": "https://sscherba.github.io"}}))
 
 # OpenAI API key (read from environment variable)
 openai.api_key = os.getenv("OPENAI_API_KEY")
