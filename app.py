@@ -17,6 +17,9 @@ def load_config():
             if "=" in line:
                 key, value = line.strip().split("=", 1)
                 config[key] = value
+     print("Config Loaded Successfully:", config)  # debugging step
+    except Exception as e:
+        print("❌ Error Loading Config:", str(e))
     return config
 
 # Load chatbot parameters
